@@ -1,5 +1,19 @@
-#class for Model3 goes here
-#Feel free to change the name of the class
-class Model3
-  
+class Role
+
+  attr_accessor :actor, :movie, :character_name
+
+  @@all = []
+
+  def initialize(actor, movie, character_name)
+    @actor = actor
+    @movie = movie
+    @character_name = character_name
+
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+ 
 end
